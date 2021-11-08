@@ -9,10 +9,11 @@ var rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+
 process.openStdin().on("keypress", function(chunk, key) {
     if(key && key.name === "c" && key.ctrl) {
-      console.log("bye bye");
-      process.exit();
+        console.log("Конец ввода");
+        process.exit();
     }
 });
 
